@@ -1,0 +1,32 @@
+// Окрестин, 2 курс 5 группа
+/*
+    Задача 4 Написать регулярное выражение определяющее является ли данная строчка
+    шестнадцатиричным идентификатором цвета в HTML. Где #FFFFFF для белого, #000000
+    для черного, #FF0000 для красного и.т.д.
+ */
+/*
+    Ввод 1:
+    #e0b0ff
+    Вывод 1:
+    Идентификатор цвета валидный
+
+    Ввод 2:
+    #1aboba
+    Вывод 2:
+    Идентификатор цвета не валиден
+ */
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Введите идентификатор цвета HTML");
+        Scanner scanner = new Scanner(System.in);
+        String color = scanner.nextLine();
+        if(color.matches("#([0-9a-fA-F]){6}")){
+            System.out.println("Идентификатор цвета валидный");
+        }
+        else {
+            System.out.println("Идентификатор цвета не валиден");
+        }
+    }
+}
